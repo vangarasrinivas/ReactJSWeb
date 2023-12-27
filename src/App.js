@@ -1,19 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Layout from './Layout';
+import './App.css';
+import Blogs from './Components/Blogs';
+import BrandCRUD from './Components/BrandCRUD';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
-import Blogs from './Components/Blogs';
+import Layout from './Layout';
+import CRUDLocalStorage from './Components/CRUDLocalStorage';
 
 function App() {
   return (
     <BrowserRouter>
-       <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/Blogs" element={<Blogs />} />
+          <Route path="/brands" element={<BrandCRUD />} />
+          <Route path="/CRUDLocalStorage" element={<CRUDLocalStorage />} />
 
         </Route>
       </Routes>

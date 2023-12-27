@@ -15,6 +15,11 @@ code {
 .nav-achour{
   text-decoration: none;
   font-weight: 700;
-  margin-right: 10px;
+  margin-right: 20px;
   
+}
+
+
+.text-red{
+  color: red;
 }
