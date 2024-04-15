@@ -9,6 +9,7 @@ const Navbar = () => {
             <Link to="/blogs" className={routerPath === '/blogs' ? 'nav-achour text-red' :'nav-achour'}>Blogs</Link>
             <Link to="/brands" className={routerPath === '/brands' ? 'nav-achour text-red' :'nav-achour'}>Brands</Link>
             <Link to="/CRUDLocalStorage" className={routerPath === '/CRUDLocalStorage' ? 'nav-achour text-red' :'nav-achour'}>CRUD Local Storage</Link>
+            <Link to="/scrollbar-progressbar" className={routerPath === '/scrollbar-progressbar' ? 'nav-achour text-red' :'nav-achour'}>Scrollbar Horizontal</Link>
         </nav>
     )
 }

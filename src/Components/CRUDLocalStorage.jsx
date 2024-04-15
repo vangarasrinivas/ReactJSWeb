@@ -13,7 +13,9 @@ const CRUDLocalStorage = () => {
         notes: ''
     }
 
+
     const [details, setDetails] = useState(initial)
+    console.log(details['name'])
     const [storedData, setStoredData] = useState([])
     console.log({storedData})
 
@@ -37,6 +39,9 @@ const CRUDLocalStorage = () => {
         setDetails(editInfo)
         modalToggle()
         fetchData()
+
+    }
+    const onUpdate=()=>{
 
     }
 
