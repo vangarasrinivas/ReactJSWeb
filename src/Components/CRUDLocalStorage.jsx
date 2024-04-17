@@ -15,9 +15,8 @@ const CRUDLocalStorage = () => {
 
 
     const [details, setDetails] = useState(initial)
-    console.log(details['name'])
+
     const [storedData, setStoredData] = useState([])
-    console.log({storedData})
 
     useEffect(() => {
         fetchData()
@@ -34,21 +33,34 @@ const CRUDLocalStorage = () => {
         fetchData()
     }
     const onEdit = (index) => {
-        console.log({ index })
         const editInfo = storedData?.find((v, i) => i === index)
-        setDetails(editInfo)
+        setDetails({
+            ...editInfo,
+            index: index + 1
+        })
         modalToggle()
         fetchData()
 
     }
-    const onUpdate=()=>{
+    console.log({ details })
+    const onUpdate = () => {
+        const editedData = storedData?.map((item, index) => {
+            if (index - 1 == details?.index) {
+                return details
+            } else {
+                return item
+            }
+        })
+
+        const info = JSON.stringify([...editedData])
+        localStorage.setItem('data', info)
+        fetchData()
+        console.log({ editedData })
 
     }
 
     const onDelete = (index) => {
-        console.log({index})
         const deleteInfo = storedData?.filter((v, i) => i !== index)
-        console.log({deleteInfo})
         localStorage.setItem('data', JSON.stringify(deleteInfo))
         fetchData()
 
@@ -152,11 +164,16 @@ const CRUDLocalStorage = () => {
                     <button
                         className="btn-primary btn"
                         onClick={() => {
-                            submitData()
-                            modalToggle()
+                            if (details?.index) {
+                                onUpdate()
+                                modalToggle()
+                            } else {
+                                submitData()
+                                modalToggle()
+                            }
                         }}
                     >
-                        Add
+                        {details?.index  ? 'Update': 'Add'}
                     </button>
                 </ModalFooter>{" "}
             </Modal>
