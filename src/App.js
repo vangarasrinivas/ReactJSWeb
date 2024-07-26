@@ -10,8 +10,15 @@ import ScrollBarHorizontal from './Components/ScrollBarHorizontal';
 import Timer from './Components/Timer';
 import Dragable from './Components/Dragable';
 import ImageGallery from './Components/ImageGallery';
+import BarcodeQrcodeScanner from './Components/BarcodeQrcodeScanner';
+import Animations from './Components/Animations';
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  AOS.init();
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -25,6 +32,8 @@ function App() {
           <Route path="/timer" element={<Timer />} />
           <Route path="/dragable" element={<Dragable />} />
           <Route path="/image-gallery" element={<ImageGallery />} />
+          <Route path="/barcode-qrcode-scanner" element={<BarcodeQrcodeScanner />} />
+          <Route path="/animations" element={<Animations />} />
 
         </Route>
       </Routes>
