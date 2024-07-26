@@ -134,6 +134,57 @@ const Animations = () => {
           </div>
         </div>
 
+        <h2>Slide Animations</h2>
+
+        <div className='mt-5'>
+          <h4>slide-up</h4>
+          <div data-aos-delay="500" data-aos="slide-up" className='border border-4 border-danger py-3' style={{ paddingInline: '10rem' }}>
+            Hello
+          </div>
+          <div data-aos-delay="750" data-aos="slide-up" className='border border-4 border-success mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello1
+          </div>
+          <div data-aos-delay="1000" data-aos="slide-up" className='border border-4 border-warning mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello2
+          </div>
+        </div>
+        <div className='mt-5'>
+          <h4>slide-down</h4>
+          <div data-aos-delay="500" data-aos="slide-down" className='border border-4 border-danger py-3' style={{ paddingInline: '10rem' }}>
+            Hello
+          </div>
+          <div data-aos-delay="750" data-aos="slide-down" className='border border-4 border-success mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello1
+          </div>
+          <div data-aos-delay="1000" data-aos="slide-down" className='border border-4 border-warning mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello2
+          </div>
+        </div>
+        <div className='mt-5'>
+          <h4>slide-left</h4>
+          <div data-aos-delay="500" data-aos="slide-left" className='border border-4 border-danger py-3' style={{ paddingInline: '10rem' }}>
+            Hello
+          </div>
+          <div data-aos-delay="750" data-aos="slide-left" className='border border-4 border-success mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello1
+          </div>
+          <div data-aos-delay="1000" data-aos="slide-left" className='border border-4 border-warning mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello2
+          </div>
+        </div>
+        <div className='mt-5'>
+          <h4>slide-right</h4>
+          <div data-aos-delay="500" data-aos="slide-right" className='border border-4 border-danger py-3' style={{ paddingInline: '10rem' }}>
+            Hello
+          </div>
+          <div data-aos-delay="750" data-aos="slide-right" className='border border-4 border-success mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello1
+          </div>
+          <div data-aos-delay="1000" data-aos="slide-right" className='border border-4 border-warning mt-5 py-3' style={{ paddingInline: '10rem' }}>
+            Hello2
+          </div>
+        </div>
+
 
         <div className='mt-5'>
           <h4>Fade Zoom In</h4>

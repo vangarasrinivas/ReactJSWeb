@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.chart-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: conic-gradient(
+    green 0 120deg,
+    red 120deg 180deg,
+    rgb(0, 255, 76) 190deg 220deg,
+    blue 220deg 360deg
+  );
+  position: relative;
+}
+
+.chart-circle::before {
+  content: ''; /* Add this line */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: aliceblue;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 1; /* Ensure the inner circle is above the main circle */
+}

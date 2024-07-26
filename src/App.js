@@ -15,6 +15,7 @@ import Animations from './Components/Animations';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CSSTasks from './Components/CSSTasks';
 
 function App() {
   AOS.init();
@@ -34,6 +35,7 @@ function App() {
           <Route path="/image-gallery" element={<ImageGallery />} />
           <Route path="/barcode-qrcode-scanner" element={<BarcodeQrcodeScanner />} />
           <Route path="/animations" element={<Animations />} />
+          <Route path="/csstasks" element={<CSSTasks />} />
 
         </Route>
       </Routes>

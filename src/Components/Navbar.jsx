@@ -15,6 +15,7 @@ const Navbar = () => {
             <Link to="/image-gallery" className={routerPath === '/image-gallery' ? 'nav-achour text-red' : 'nav-achour'}>Image Gallery</Link>
             <Link to="/barcode-qrcode-scanner" className={routerPath === '/barcode-qrcode-scanner' ? 'nav-achour text-red' : 'nav-achour'}>Barcode QRcode Scanner</Link>
             <Link to="/animations" className={routerPath === '/animations' ? 'nav-achour text-red' : 'nav-achour'}>animations</Link>
+            <Link to="/csstasks" className={routerPath === '/csstasks' ? 'nav-achour text-red' : 'nav-achour'}>CSS Tasks</Link>
         </nav>
     )
 }
